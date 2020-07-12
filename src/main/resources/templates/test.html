@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Taco Cloud</title>
+</head>
+<body>
+	<h1>Welcome to...</h1>
+	<img th:src="@{../images/image1.jpg}" />
+	<p></p>
+	<table>
+	    <thead>
+	    </thead>
+	    <tbody>
+	    	<th><h3>Wraps</h3></th>
+	        <tr th:each="ingredient : ${wrap}">
+	            <td><span th:text="${ingredient.id}"> ID </span></td>
+	            <td><span th:text="${ingredient.name}"> NAME </span></td>
+	        </tr>
+	        <th><h3>Cheeses</h3></th>
+	        <tr th:each="ingredient : ${cheese}">
+	            <td><span th:text="${ingredient.id}"> ID </span></td>
+	            <td><span th:text="${ingredient.name}"> NAME </span></td>
+	        </tr>
+	    </tbody>
+	</table>
+</body>
+</html>
