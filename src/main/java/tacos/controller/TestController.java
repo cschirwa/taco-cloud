@@ -33,8 +33,8 @@ public class TestController {
 				new Ingredient("LETC", "Lettuce", Type.VEGGIES),
 				new Ingredient("CHED", "Cheddar", Type.CHEESE),
 				new Ingredient("JACK", "Monterray Jack", Type.CHEESE),
-				new Ingredient("SLSA", "Salsa", Type.CHEESE),
-				new Ingredient("SRCR", "Sour Cream", Type.CHEESE));
+				new Ingredient("SLSA", "Salsa", Type.SAUCE),
+				new Ingredient("SRCR", "Sour Cream", Type.SAUCE));
 		
 		Type[] types = Ingredient.Type.values();
 		for(Type type: types) {

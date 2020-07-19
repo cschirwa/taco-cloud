@@ -4,6 +4,7 @@
 <head>
 <title>Taco Cloud</title>
 <link rel="stylesheet" th:href="@{/styles.css}" />
+<link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css}">
 </head>
 <body>
 	<h1>Design your taco!</h1>
@@ -48,10 +49,18 @@
 				</div>
 			</div>
 		</div>
+		<p/>
 		<div>
 			<h3>Name your taco creation:</h3>
-			<input type="text" th:field="*{name}" /> <br />
-			<button>Submit your taco</button>
+      <input type="text" th:field="*{name}"/>
+      <!-- end::all[] -->
+      <!-- span th:text="${#fields.hasErrors('name')}">XXX</span-->
+      <span class="validationError"
+            th:if="${#fields.hasErrors('name')}"
+            th:errors="*{name}">Name Error</span>
+      <!-- tag::all[] -->
+      <br/>
+			<button type="submit" class="btn btn-dark">Submit your Taco</button>
 		</div>
 	</form>
 </body>
